@@ -10,6 +10,7 @@ import CustomHookDemo from './pages/hooks/custom.hook.demo';
 import ReactMemoDemo from './pages/hooks/memoization/react.memo.demo';
 import UseMemoDemo from './pages/hooks/memoization/usememo.demo';
 import UseCallbackDemo from './pages/hooks/memoization/usecallback.demo';
+import UseRefDemo from './pages/hooks/memoization/useref.demo';
 
 export async function getSomeRecords() {
 	// Simulate a data fetching function
@@ -71,6 +72,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'useCallback',
 				Component: UseCallbackDemo,
+			},
+			{
+				path: 'useRef',
+				Component: UseRefDemo,
 			},
 		],
 	},

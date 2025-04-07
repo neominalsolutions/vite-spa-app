@@ -23,6 +23,8 @@ function SiteLayout() {
 				<Link to="/useMemo">Use Memo</Link>
 				{'|'}
 				<Link to="/useCallback">Use Callback</Link>
+				{'|'}
+				<Link to="/useRef">Use Ref</Link>
 			</nav>
 
 			<Outlet />
