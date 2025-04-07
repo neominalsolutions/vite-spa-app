@@ -15,6 +15,8 @@ function SiteLayout() {
 				<Link to="/useEffect">UseEffect Demo</Link>
 				{'|'}
 				<Link to="/useEffectFetch">UseEffect Fetch Demo</Link>
+				{'|'}
+				<Link to="/customHook">Custom Hook Demo</Link>
 			</nav>
 
 			<Outlet />
