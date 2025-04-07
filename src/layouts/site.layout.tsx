@@ -21,6 +21,8 @@ function SiteLayout() {
 				<Link to="/reactMemo">React Memo</Link>
 				{'|'}
 				<Link to="/useMemo">Use Memo</Link>
+				{'|'}
+				<Link to="/useCallback">Use Callback</Link>
 			</nav>
 
 			<Outlet />
