@@ -33,7 +33,7 @@ export const UseFetch = (endpoint: string) => {
 
 	useEffect(() => {
 		loadData();
-	}, []);
+	}, [endpoint]); // endpoint değişimine göre yeniden tetiklenecek.
 
 	return state;
 };
