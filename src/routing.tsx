@@ -4,12 +4,38 @@ import AboutPage from './pages/about.page';
 import HomePage from './pages/home.page';
 import AdminLayout from './layouts/admin.layout';
 
+export async function getSomeRecords() {
+	// Simulate a data fetching function
+	return Promise.resolve([
+		{ id: 1, name: 'Record 1' },
+		{ id: 2, name: 'Record 2' },
+	]);
+}
+
 export const router = createBrowserRouter([
 	{
 		path: '/',
 		Component: SiteLayout, // This is the main layout for the site
 		children: [
-			{ path: '', Component: HomePage },
+			{
+				path: '',
+				Component: HomePage,
+				loader: async () => {
+					// return data from here
+					return { records: await getSomeRecords() };
+				},
+				action: async ({ request }) => {
+					console.log('request', request);
+
+					const formData = await request.formData();
+					console.log('Form Data:', formData);
+					const title = formData.get('title');
+					console.log('Title:', title);
+					// formdan gönderilen veriyi Post edelim
+					// const project = await someApi.updateProject({ title });
+					return { message: 'Ok' };
+				},
+			},
 			{ path: 'about', Component: AboutPage },
 		],
 	},
