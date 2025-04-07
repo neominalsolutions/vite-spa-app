@@ -13,6 +13,8 @@ function SiteLayout() {
 				<Link to="/useState">UseState Demo</Link>
 				{'|'}
 				<Link to="/useEffect">UseEffect Demo</Link>
+				{'|'}
+				<Link to="/useEffectFetch">UseEffect Fetch Demo</Link>
 			</nav>
 
 			<Outlet />

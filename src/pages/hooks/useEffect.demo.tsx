@@ -8,6 +8,10 @@ type User = {
 function UseEffectDemo() {
 	const [user, setUser] = useState<User>({ name: '' });
 
+	const interval = setInterval(() => {
+		console.log('interval');
+	}, 1000);
+
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const onInputChange = (e: any) => {
 		setUser({ name: e.target.value });
@@ -22,12 +26,13 @@ function UseEffectDemo() {
 			// clean up functions
 			// component domdan çıkarken component içinde yapılacak bir temizlik işi varsa bu function içinde yaparız.
 			console.log('unmounting');
+			clearInterval(interval);
 		};
 	}, []); // [] deps => useEffect state değişiminde [...state] tanımlanmış tüm
 	// stateleri takip eder tekrar tetiklenir.
 	// [] boş bırakırsak useEffect her homponent için birkez tetikleniyor.
 
-    // Not: bir componente birden fazla useEffect yazılırsa, her useEffect 1 yere mahsus tetiklenir.
+	// Not: bir componente birden fazla useEffect yazılırsa, her useEffect 1 yere mahsus tetiklenir.
 	useEffect(() => {
 		console.log('user state değişti');
 	}, [user]); // user state değiştiğpinde tetiklen

@@ -5,6 +5,7 @@ import HomePage from './pages/home.page';
 import AdminLayout from './layouts/admin.layout';
 import UseStateDemo from './pages/hooks/useState.demo';
 import UseEffectDemo from './pages/hooks/useEffect.demo';
+import UseEffectFetchDemo from './pages/hooks/useEffect.fetch.demo';
 
 export async function getSomeRecords() {
 	// Simulate a data fetching function
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'useEffect',
 				Component: UseEffectDemo,
+			},
+			{
+				path: 'useEffectFetch',
+				Component: UseEffectFetchDemo,
 			},
 		],
 	},
