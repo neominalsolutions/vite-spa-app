@@ -3,6 +3,8 @@ import SiteLayout from './layouts/site.layout';
 import AboutPage from './pages/about.page';
 import HomePage from './pages/home.page';
 import AdminLayout from './layouts/admin.layout';
+import UseStateDemo from './pages/hooks/useState.demo';
+import UseEffectDemo from './pages/hooks/useEffect.demo';
 
 export async function getSomeRecords() {
 	// Simulate a data fetching function
@@ -37,6 +39,14 @@ export const router = createBrowserRouter([
 				},
 			},
 			{ path: 'about', Component: AboutPage },
+			{
+				path: 'useState',
+				Component: UseStateDemo,
+			},
+			{
+				path: 'useEffect',
+				Component: UseEffectDemo,
+			},
 		],
 	},
 	{

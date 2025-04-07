@@ -9,6 +9,10 @@ function SiteLayout() {
 				<Link to="/">Home</Link>
 				{'|'}
 				<Link to="/about">About</Link>
+				{'|'}
+				<Link to="/useState">UseState Demo</Link>
+				{'|'}
+				<Link to="/useEffect">UseEffect Demo</Link>
 			</nav>
 
 			<Outlet />
